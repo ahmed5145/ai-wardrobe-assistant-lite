@@ -1,20 +1,15 @@
 import React from 'react';
 
-const OutfitSuggestion = ({ suggestedOutfit, rateOutfit, outfitRatings }) => {
+const OutfitSuggestion = ({ suggestedOutfit }) => {
+  if (!suggestedOutfit) {
+    return <p>No outfit suggestion available.</p>; // Handle the case where there is no outfit
+  }
   return (
-    <div>
-      <h2>Suggested Outfit: {suggestedOutfit ? suggestedOutfit.item : 'Loading...'}</h2>
-      {suggestedOutfit && (
-        <div>
-          <span>Rate this outfit: </span>
-          {[1, 2, 3, 4, 5].map((num) => (
-            <button key={num} onClick={() => rateOutfit(suggestedOutfit.id, num)}>
-              {num}
-            </button>
-          ))}
-          <p>Current Rating: {outfitRatings[suggestedOutfit.id] || 'Not Rated'}</p>
-        </div>
-      )}
+    <div className="outfit-suggestion">
+      <h3>Suggested Outfit</h3>
+      <p>Name: {suggestedOutfit.name}</p>
+      <p>Weather Type: {suggestedOutfit.weatherType}</p>
+      {/* Add any other outfit properties you want to display */}
     </div>
   );
 };

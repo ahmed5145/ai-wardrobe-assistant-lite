@@ -1,0 +1,40 @@
+.dashboard {
+  padding: 20px;
+  text-align: center;
+}
+
+.add-outfit-section {
+  margin-top: 20px;
+}
+
+.outfit-suggestion-section {
+  margin-top: 40px;
+}
+
+.outfit-list-section {
+  margin-top: 60px;
+}
+
+.outfit-list-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.outfit-list-section li {
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin: 5px 0;
+}
+.logout-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #e74c3c; /* Red color for logout */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
