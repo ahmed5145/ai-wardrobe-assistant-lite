@@ -1,4 +1,3 @@
-// Dashboard.js
 import React, { useState, useEffect } from 'react';
 import { getOutfits } from '../services/outfitService';
 import { fetchWeatherData } from '../services/weatherService';
@@ -6,6 +5,10 @@ import OutfitForm from './OutfitForm';
 import OutfitSuggestion from './OutfitSuggestion';
 import './Dashboard.css';
 import { auth } from '../firebaseConfig';
+
+// Import the Analytics component
+import { Analytics } from "@vercel/analytics/react";
+<Analytics/>
 
 const Dashboard = ({ user }) => {
   const [outfits, setOutfits] = useState([]);
